@@ -221,7 +221,7 @@ end
       DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
 
-      UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.10, Color3.fromRGB(255, 127, 0)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(0, 200, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 200, 200)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 200)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(100, 0, 200)), ColorSequenceKeypoint.new(0.70, Color3.fromRGB(200, 0, 0)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(200, 100, 0)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(200, 200, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 200, 0))}
+      UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.10, Color3.fromRGB(255, 127, 0)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(139, 0, 255)), ColorSequenceKeypoint.new(0.70, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(255, 127, 0)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 255, 0))}
 
       local TweenService = game:GetService("TweenService")
       local tweeninfo = TweenInfo.new(7, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
@@ -264,12 +264,12 @@ end
       
       Side.Name = "Side"
       Side.Parent = SB
-      Side.BackgroundColor3 = Color3.fromRGB(100, 0, 200)
-      Side.BorderColor3 = Color3.fromRGB(100, 0, 200)
+      Side.BackgroundColor3 = Color3.fromRGB(139, 0, 255)
+      Side.BorderColor3 = Color3.fromRGB(139, 0, 255)
       Side.BorderSizePixel = 0
       Side.ClipsDescendants = true
       Side.Position = UDim2.new(1, 0, 0, 0)
-      Side.Size = UDim2.new(0, 60, 0, 200)
+      Side.Size = UDim2.new(0, 110, 0, 353)
       Side.Transparency = 1.0
       
       SideG.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, zyColor), ColorSequenceKeypoint.new(1.00, zyColor)}
@@ -284,7 +284,7 @@ end
       TabBtns.BackgroundTransparency = 1.000
       TabBtns.BorderSizePixel = 0
       TabBtns.Position = UDim2.new(0, 0, 0.0973535776, 0)
-      TabBtns.Size = UDim2.new(0, 90, 0, 250)
+      TabBtns.Size = UDim2.new(0, 110, 0, 318)
       TabBtns.CanvasSize = UDim2.new(0, 0, 1, 0)
       TabBtns.ScrollBarThickness = 0
       
@@ -324,7 +324,7 @@ end
         local status = "down" 
         gradient.Offset = startingPos
         local function rainbowColors()
-            local sat, val = 200, 200 
+            local sat, val = 255, 255 
             for i = 1, 10 do 
                 local hue = i * 17 
                 table.insert(list, Color3.fromHSV(hue / 255, sat / 255, val / 255))
@@ -341,7 +341,7 @@ end
             create:Play()
             create.Completed:Wait() 
             gradient.Offset = startingPos 
-            gradient.Rotation = 100
+            gradient.Rotation = 180
             if counter == #list - 1 and status == "down" then
                 gradient.Color = s({
                     kpt(0, gradient.Color.Keypoints[1].Value),
@@ -416,7 +416,7 @@ end
       --[[
       Open.Name = "Open"
       Open.Parent = dogent
-      Open.BackgroundColor3 = Color3.fromRGB(90, 0, 120)
+      Open.BackgroundColor3 = Color3.fromRGB(139, 0, 255)
       Open.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
       Open.Size = UDim2.new(0, 61, 0, 32)
       Open.Font = Enum.Font.SourceSans
@@ -435,7 +435,7 @@ end
 -- Properties:
 
 Frame.Parent = dogent
-Frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
@@ -446,13 +446,13 @@ UICorner.CornerRadius = UDim.new(0, 90)
 UICorner.Parent = Frame
 
 Open.Parent = Frame
-Open.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
 Open.Size = UDim2.new(2, 5, 2, 5)
 Open.Active = true
 Open.Draggable = true
-Open.Image = "rbxassetid://18107430261"
+Open.Image = "rbxassetid://18942673533"
 Open.MouseButton1Click:Connect(function()
   Main.Visible = not Main.Visible
   Open.Image = Main.Visible and "rbxassetid://18107430261" or "rbxassetid://18107430261" --开关的图
@@ -484,7 +484,7 @@ UIG.Parent = Open
         TabIco.BackgroundTransparency = 1.000
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
-        TabIco.Image = "rbxassetid://18107430261" or icon and "rbxassetid:18107430261//"..icon
+        TabIco.Image = "rbxassetid://7734068321" or icon and "rbxassetid://"..icon
         TabIco.ImageTransparency = 0.2
         
         TabText.Name = "TabText"
@@ -531,7 +531,7 @@ UIG.Parent = Open
         end)
 ------------------------------------------------------AL.King音乐-------------------------------------------------------
     local sound = Instance.new("Sound")
-    sound.SoundId = "rbxassetid://18107430261" --音乐id
+    sound.SoundId = "rbxassetid://6797864253" --音乐id
     sound.Parent = game.Workspace
     sound:Play()
 ---------------分割线-------------------------------分割线-------------------------------分割线----------------
@@ -576,14 +576,14 @@ UIG.Parent = Open
           SectionOpen.BorderSizePixel = 0
           SectionOpen.Position = UDim2.new(0, -33, 0, 5)
           SectionOpen.Size = UDim2.new(0, 26, 0, 26)
-          SectionOpen.Image = "rbxassetid://18107430261"
+          SectionOpen.Image = "rbxassetid://7734068321"
           
           SectionOpened.Name = "SectionOpened"
           SectionOpened.Parent = SectionOpen
           SectionOpened.BackgroundTransparency = 1.000
           SectionOpened.BorderSizePixel = 0
           SectionOpened.Size = UDim2.new(0, 26, 0, 26)
-          SectionOpened.Image = "rbxassetid://18107430261"
+          SectionOpened.Image = "rbxassetid://18942673533"
           SectionOpened.ImageTransparency = 1.000
     
           SectionToggle.Name = "SectionToggle"
